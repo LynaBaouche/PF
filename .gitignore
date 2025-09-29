@@ -1,0 +1,10 @@
+# Project exclude paths
+/PF - Scala/project/target/
+/PF - Scala/target/
+/PF - Scala/target/scala-3.4.2/classes/
+/PF-Java/.gradle/
+/PF-Java/build/
+/PF-Java/build/classes/java/main/
+/project/target/
+/Scala0/target/
+/target/
