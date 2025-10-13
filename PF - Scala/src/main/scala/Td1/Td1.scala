@@ -35,6 +35,16 @@ object Td1 {
     infos.filter(_.country == country)
   }
   //on souhaite généraliser avec une méthode selection
+  def selection[T](x: Information => T)(y: T => Boolean)(is: List[Information]): List[Information] = {
+    is.filter(info => y(x(info)))
+    //bien comprendre l'opération de composition des fonctions
+  }
+  def génèrePaire[T,U](f: T => U)(g: Int => T)(x: Int): U = {
+    f(g(x))
+  }
+
+
+
 
   @main
   def test(): Unit = {
@@ -52,5 +62,10 @@ object Td1 {
     println(informationCountry("France", information))
     val TotalCostCountry = informationCountry("France", information).map(_.price).sum
     // la suite
+    val messageSelecteur = selection (i => i.message)
+    val tagSelecteur = selection (_.tags)
+    val countrySelecteur = selection (_.country)
+    val timestampSelecteur = selection (_.timestamp)
+    println(messageSelecteur(_.contains("newer"))(information))
   }
 }
