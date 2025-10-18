@@ -10,7 +10,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="PF-Java.main" />
+    <orderEntry type="library" name="Gradle: io.vavr:vavr:0.10.4" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter:5.10.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.vavr:vavr-match:0.10.4" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-params:5.10.0" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.10.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apiguardian:apiguardian-api:1.1.2" level="project" />

@@ -1,27 +1,27 @@
 package org.example.tds.td2;
 
-import java.util.HashSet;
 import java.util.Set;
-    public class Annee {
-        private Set<UE> ues;
-        private Set<Etudiant> etudiants;
+import java.util.HashSet;
 
-        public Annee(Set<UE> ues) {
-            this.ues = ues;
-            this.etudiants = new HashSet<>();
-        }
+public class Annee {
+    private Set<UE> ues;
+    private Set<Etudiant> etudiants;
 
-        public Set<UE> getUes() { return ues; }
-        public Set<Etudiant> getEtudiants() { return etudiants; }
-
-        public void inscrire(Etudiant e) {
-            etudiants.add(e);
-        }
-
-        @Override
-        public String toString() {
-            return "Annee{" + "ues=" + ues + ", etudiants=" + etudiants + '}';
-        }
+    public Annee(Set<UE> ues) {
+        this.ues = new HashSet<>(ues); // éviter fuite données
+        this.etudiants = new HashSet<>();
     }
 
+    public Set<UE> ues() {
+        return new HashSet<>(ues); // éviter fuite données
+    }
+
+    public Set<Etudiant> etudiants() {
+        return new HashSet<>(etudiants); // éviter fuite données
+    }
+
+    public void inscrire(Etudiant e) {
+        etudiants.add(e); // pas fonctionnel !
+    }
+}
 

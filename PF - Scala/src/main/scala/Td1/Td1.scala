@@ -67,5 +67,6 @@ object Td1 {
     val countrySelecteur = selection (_.country)
     val timestampSelecteur = selection (_.timestamp)
     println(messageSelecteur(_.contains("newer"))(information))
+    
   }
 }
